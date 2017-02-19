@@ -14,8 +14,8 @@ This is a very LEAN and MEAN OS image to play and learn how to extend it.
 This is a blind LXDE OS image for the NanoPi A64 not tested
 -----------------------------------------------------------
 
-- Wifi
-- BT (bluetooth)
+- Wifi (rtl8189es)
+- BT (bluetooth) ** huh ? **
 - OV5640 (camera)
 - HDMI 1080P
 - GbE (Gigabit ethernet)
@@ -25,3 +25,4 @@ This is a blind LXDE OS image for the NanoPi A64 not tested
 History Log:
 ===========
 * initial commit (readme file)
+* kernel 3.10.104 RC3 (not tested)
