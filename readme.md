@@ -15,7 +15,6 @@ This is a blind LXDE OS image for the NanoPi A64 not tested
 -----------------------------------------------------------
 
 - Wifi (rtl8189es)
-- BT (bluetooth) ** huh ? **
 - OV5640 (camera)
 - HDMI 1080P
 - GbE (Gigabit ethernet)
