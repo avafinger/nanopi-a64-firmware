@@ -31,7 +31,7 @@ This is a LXDE OS image for the NanoPi A64
 
 - OV5640 (camera) - status: not working, may need a revision
 - HDMI 1080P - status: unable to set 1080P, may need a revision
-
+- shutdown not always works, reboot most of the times
 
 Screenshots
 -----------
