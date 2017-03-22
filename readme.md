@@ -11,17 +11,54 @@ I use LXDE just because it is very fast, snappy  and responsive!
 You can always improve, tweak and tune the way you want at any time.
 This is a very LEAN and MEAN OS image to play and learn how to extend it.
 
-This is a blind LXDE OS image for the NanoPi A64 not tested
------------------------------------------------------------
+This is a LXDE OS image for the NanoPi A64
+------------------------------------------
 
-- Wifi (rtl8189es)
-- OV5640 (camera)
-- HDMI 1080P
-- GbE (Gigabit ethernet)
-- Kernel 3.10.104
+## Tested on a NanoPi A64 board
 
+- Wifi (rtl8189es) - status: working
+- HDMI 720P - status: no 1080P only 720P
+- GbE (Gigabit Ethernet) - status: working
+- Kernel 3.10.104 - status: working
+
+
+## Currently working
+
+- Firefox 64bit - stable
+
+
+## Currently not working
+
+- OV5640 (camera) - status: not working, may need a revision
+- HDMI 1080P - status: unable to set 1080P, may need a revision
+
+
+Screenshots
+-----------
+
+Wifi
+![bluetooth](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/wifi.png)
+
+Firefox
+![bluetooth](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/firefox.png)
+
+htop
+![bluetooth](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/htop.png)
+
+RTL8189ETV (8189es)
+![bluetooth](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/rtl8189es.png)
+
+
+Credits
+-------
+FriendlyArm: http://www.friendlyarm.com/index.php?route=product/product&path=69&product_id=159
+Longsleep's kernel: https://github.com/longsleep/linux-pine64
+Armbian: https://www.armbian.com/
+@lex
 
 History Log:
 ===========
 * initial commit (readme file)
-* kernel 3.10.104 RC3 (not tested)
+* kernel 3.10.104 RC3 (tested and working)
+* screen images (WIP)
+* Initial instructions (WIP)
