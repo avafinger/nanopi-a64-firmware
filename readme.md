@@ -51,10 +51,11 @@ RTL8189ETV (8189es)
 
 Credits
 -------
-FriendlyArm: http://www.friendlyarm.com/index.php?route=product/product&path=69&product_id=159
-Longsleep's kernel: https://github.com/longsleep/linux-pine64
-Armbian: https://www.armbian.com/
-@lex
+
+- FriendlyArm: http://www.friendlyarm.com/index.php?route=product/product&path=69&product_id=159
+- Longsleep's kernel: https://github.com/longsleep/linux-pine64
+- Armbian: https://www.armbian.com/
+- @lex
 
 History Log:
 ===========
