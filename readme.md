@@ -14,10 +14,12 @@ I use LXDE just because it is very fast, snappy  and responsive!
 You can always improve, tweak and tune the way you want at any time.
 This is a very LEAN and MEAN OS image to play and learn how to extend it.
 
+Disclaimer: Use at own risk
+
 This is a LXDE OS image for the NanoPi A64
 ------------------------------------------
 
-## Tested on a NanoPi A64 board
+## Tested on NanoPi A64 board
 
 - Wifi (rtl8189es) - status: working
 - HDMI 720P - status: no 1080P only 720P
