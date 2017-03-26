@@ -1,6 +1,9 @@
 NanoPi A64 Ubuntu Xenial Xerus 16.04 LXDE OS Image (firmware)
 =============================================================
 
+**Update:** Kernel version 3.10.105 with Blue Led (hearbeat or SD Card activities)
+
+
 LXDE (Lightweight X11 Desktop Environment) is a desktop environment which is lightweight 
 and fast and uses less RAM and less CPU while being a feature rich desktop environment.
 
