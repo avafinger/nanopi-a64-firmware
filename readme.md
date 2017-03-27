@@ -22,7 +22,8 @@ This is a LXDE OS image for the NanoPi A64
 ## Tested on NanoPi A64 board
 
 - Wifi (rtl8189es) - status: working
-- HDMI 720P - status: no 1080P only 720P
+- HDMI 720P - status: working
+- HDMI 1080P - status: working
 - GbE (Gigabit Ethernet) - status: working
 - Kernel 3.10.104 - status: working
 
@@ -35,11 +36,14 @@ This is a LXDE OS image for the NanoPi A64
 ## Currently not working
 
 - OV5640 (camera) - status: not working, may need a revision
-- HDMI 1080P - status: unable to set 1080P, may need a revision
 - shutdown not always works, reboot most of the times
 
 Screenshots
 -----------
+
+1080P
+![1080p60](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/1080p.png)
+
 
 Wifi
 ![bluetooth](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/wifi.png)
