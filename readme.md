@@ -1,7 +1,7 @@
 NanoPi A64 Ubuntu Xenial Xerus 16.04 LXDE OS Image (firmware)
 =============================================================
 
-**Update:** Kernel version 3.10.105 with Blue Led (heartbeat or SD Card activities)
+**Update:** Kernel version 3.10.105 with Blue Led (heartbeat)
 
 
 LXDE (Lightweight X11 Desktop Environment) is a desktop environment which is lightweight 
@@ -61,12 +61,18 @@ Issues
 ------
 
    - Shutdown
+
+
 	If you shutdown (sudo shutdown -h or the Shutdown Button), most of the times (90%)
 	the board will reboot, if you need to turn off the board click on Shutdown Button
 	and wait for both leds turn off and then unplug the power cord, if you cut the power
 	while the board is booting again you will corrupt the SD CARD!
 
+
+
    - Board does not boot
+
+
 	In rare occasions the board does not boot despite Blue Led is on heartbeating or
 	it enter in a boot cycle, it is usually safe to unplug the power cord but
 	always check card integrity after that.
