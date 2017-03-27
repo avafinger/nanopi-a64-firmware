@@ -14,6 +14,8 @@ I use LXDE just because it is very fast, snappy  and responsive!
 You can always improve, tweak and tune the way you want at any time.
 This is a very LEAN and MEAN OS image to play and learn how to extend it.
 
+** THIS IS a WiP **
+
 Disclaimer: Use at own risk
 
 This is a LXDE OS image for the NanoPi A64
@@ -22,20 +24,19 @@ This is a LXDE OS image for the NanoPi A64
 ## Tested on NanoPi A64 board
 
 - Wifi (rtl8189es) - status: working
-- HDMI 720P - status: working
-- HDMI 1080P - status: working
+- HDMI 720P - status: working (a64-2GB.dtb_720P)
+- HDMI 1080P - status: working (a64-2GB.dtb)
 - GbE (Gigabit Ethernet) - status: working
 - Kernel 3.10.104 - status: working
-
-
-## Currently working
+- Kernel 3.10.105 - status: working
+- Leds (Blue) - status: working - "heartbeat"
 
 - Firefox 64bit - stable
 
 
 ## Currently not working
 
-- OV5640 (camera) - status: not working, may need a revision
+- OV5640 (camera) - status: not working yet, may need a revision
 - shutdown not always works, reboot most of the times
 
 Screenshots
@@ -43,7 +44,6 @@ Screenshots
 
 1080P
 ![1080p60](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/1080p.png)
-
 
 Wifi
 ![bluetooth](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/wifi.png)
@@ -57,10 +57,26 @@ htop
 RTL8189ETV (8189es)
 ![bluetooth](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/rtl8189es.png)
 
+Issues
+------
+
+   - Shutdown
+	If you shutdown (sudo shutdown -h or the Shutdown Button), most of the times (90%)
+	the board will reboot, if you need to turn off the board click on Shutdown Button
+	and wait for both leds turn off and then unplug the power cord, if you cut the power
+	while the board is booting again you will corrupt the SD CARD!
+
+   - Board does not boot
+	In rare occasions the board does not boot despite Blue Led is on heartbeating or
+	it enter in a boot cycle, it is usually safe to unplug the power cord but
+	always check card integrity after that.
+
+
 
 Credits
 -------
 
+- Thanks to Yuefei (FriendlyArm) for the board
 - FriendlyArm: http://www.friendlyarm.com/index.php?route=product/product&path=69&product_id=159
 - Longsleep's kernel: https://github.com/longsleep/linux-pine64
 - Armbian: https://www.armbian.com/
