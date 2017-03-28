@@ -108,32 +108,29 @@ Instructions
 Assuming we have an USB card reader and our device is /dev/sdX where X is a letter [b,c..]
 and in our example (change to your letter) my device is 'c', /dev/sdc.
 
-    - Clone our nanopi-a64-firmware
-
+- Clone our nanopi-a64-firmware
 
 	git clone https://github.com/avafinger/nanopi-a64-firmware
 	cd nanopi-a64-firmware/
 
 
-    - Rebuild our rootfs
-
+- Rebuild our rootfs
 
 	cat rootfs_nanopia64_rc1.tar.gz.0* > rootfs_nanopia64_rc1.tar.gz
 
 
-    - Check if we have it correctly
-
+- Check if we have it correctly
 
 	md5sum rootfs_nanopia64_rc1.tar.gz
 	060b4d6f41fed693d578ab1bf94cd818  rootfs_nanopia64_rc1.tar.gz
 	
 
-    - Format the SD CARD and Flash (Warning: run as sudo or root and make sure you get the correct DEVICE letter)
-
+- Format the SD CARD and Flash (Warning: run as sudo or root and make sure you get the correct DEVICE letter)
 
 	sudo chmod +x *.sh
 	sudo ./format_sd.sh /dev/sdc
 	sudo ./flash_sd.sh /dev/sdc
+
 
 Now we have our SD CARD with the OS Image, boot with this card and Enjoy!
 
