@@ -74,12 +74,24 @@ Issues
 
 
 
-   - Board does not boot
+   - Board does not boot (what to do?)
 
 
 	In rare occasions the board does not boot despite Blue Led is on heartbeating or
-	it enter in a boot cycle, it is usually safe to unplug the power cord but
-	always check card integrity after that.
+	it enters in a boot cycle (keep rebooting), it is usually safe to unplug 
+	the power cord but always check card integrity after that.
+
+
+   	
+	Try again to boot several times, sometimes it enters in the u-boot prompt.
+
+
+	
+	Change SD CARD and repeat the process.
+
+
+
+	Find another USB Reader and repeat all over again with this USB Reader
 
 
 
@@ -96,19 +108,24 @@ Credits
 Instructions
 ------------
 
-    - Requirements
+Requirements:
 
-	We need a linux box
-	Install md5sum
-	PSU with at least 2A
-	Good SD CARD, 8GB minimum (find a good and trusted brand)
-	Good USB card reader (make sure you have a trusted USB card reader)
+	- We need a linux box
+	
+	- Install md5sum
+	
+	- PSU with at least 2.5A
+	
+	- Good SD CARD, 8GB minimum (find a good and trusted brand)
+	
+	- Good USB card reader (make sure you have a trusted USB card reader)
 
 
 Assuming we have an USB card reader and our device is /dev/sdX where X is a letter [b,c..]
 and in our example (change to your letter) my device is 'c', /dev/sdc.
 
-- Clone our nanopi-a64-firmware
+Clone our nanopi-a64-firmware
+
 
 	git clone https://github.com/avafinger/nanopi-a64-firmware
 
@@ -116,13 +133,15 @@ and in our example (change to your letter) my device is 'c', /dev/sdc.
 
 
 
-- Rebuild our rootfs
+Rebuild our rootfs
+
 
 	cat rootfs_nanopia64_rc1.tar.gz.0* > rootfs_nanopia64_rc1.tar.gz
 
 
 
-- Check if we have it correctly
+Check if we have it correctly
+
 
 	md5sum rootfs_nanopia64_rc1.tar.gz
 
@@ -130,7 +149,8 @@ and in our example (change to your letter) my device is 'c', /dev/sdc.
 	
 
 
-- Format the SD CARD and Flash (Warning: run as sudo or root and make sure you get the correct DEVICE letter)
+Format the SD CARD and Flash (Warning: run as sudo or root and make sure you get the correct DEVICE letter)
+
 
 	sudo chmod +x *.sh
 
@@ -142,6 +162,10 @@ and in our example (change to your letter) my device is 'c', /dev/sdc.
 
 Now we have our SD CARD with the OS Image, boot with this card and Enjoy!
 
+
+	user: ubuntu
+
+	pasw: ubuntu
 
 
 	
