@@ -14,6 +14,10 @@ I use LXDE just because it is very fast, snappy  and responsive!
 You can always improve, tweak and tune the way you want at any time.
 This is a very LEAN and MEAN OS image to play and learn how to extend it.
 
+We will flash the OS image in a very unusual way and do it manually.
+Read **instructions section** on how to flash the image.
+
+
 ** THIS IS a WiP **
 
 Disclaimer: Use at own risk
@@ -88,6 +92,54 @@ Credits
 - Armbian: https://www.armbian.com/
 - @lex
 
+
+Instructions
+------------
+
+    - Requirements
+
+	We need a linux box
+	Install md5sum
+	PSU with at least 2A
+	Good SD CARD, 8GB minimum (find a good and trusted brand)
+	Good USB card reader (make sure you have a trusted USB card reader)
+
+
+Assuming we have an USB card reader and our device is /dev/sdX where X is a letter [b,c..]
+and in our example (change to your letter) my device is 'c', /dev/sdc.
+
+    - Clone our nanopi-a64-firmware
+
+
+	git clone https://github.com/avafinger/nanopi-a64-firmware
+	cd nanopi-a64-firmware/
+
+
+    - Rebuild our rootfs
+
+
+	cat rootfs_nanopia64_rc1.tar.gz.0* > rootfs_nanopia64_rc1.tar.gz
+
+
+    - Check if we have it correctly
+
+
+	md5sum rootfs_nanopia64_rc1.tar.gz
+	060b4d6f41fed693d578ab1bf94cd818  rootfs_nanopia64_rc1.tar.gz
+	
+
+    - Format the SD CARD and Flash (Warning: run as sudo or root and make sure you get the correct DEVICE letter)
+
+
+	sudo chmod +x *.sh
+	sudo ./format_sd.sh /dev/sdc
+	sudo ./flash_sd.sh /dev/sdc
+
+Now we have our SD CARD with the OS Image, boot with this card and Enjoy!
+
+
+
+	
 History Log:
 ===========
 * initial commit (readme file)
