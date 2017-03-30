@@ -69,7 +69,7 @@ RTL8189ETV (8189es)
 Issues
 ------
 
-   - Shutdown
+- Shutdown
 
 
 	If you shutdown (sudo shutdown -h or the Shutdown Button), most of the times (90%)
@@ -79,22 +79,24 @@ Issues
 
 
 
-   - Board does not boot (what to do?)
+- Board does not boot (what to do?)
 
 
 	In rare occasions the board does not boot despite Blue Led is on heartbeating or
 	it enters in a boot cycle (keep rebooting), it is usually safe to unplug 
 	the power cord but always check card integrity after that.
-
  
-   	
+    
+    	
 	Try again to boot several times, sometimes it enters in the u-boot prompt.
 
- 
+   
+  
 	
 	Change SD CARD and repeat the process.
 
- 
+   
+  
 
 	Find another USB Reader and repeat all over again with this USB Reader
 
