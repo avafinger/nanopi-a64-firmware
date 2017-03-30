@@ -43,6 +43,11 @@ This is a LXDE OS image for the NanoPi A64
 - OV5640 (camera) - status: not working yet, may need a revision
 - shutdown not always works, reboot most of the times
 
+## NanoPi A64 Booting linux
+
+[![NanoPI A64 Booting sequence](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/0.jpg)](https://youtu.be/0j9BPUnExdA)
+
+
 Screenshots
 -----------
 
@@ -81,15 +86,15 @@ Issues
 	it enters in a boot cycle (keep rebooting), it is usually safe to unplug 
 	the power cord but always check card integrity after that.
 
-
+ 
    	
 	Try again to boot several times, sometimes it enters in the u-boot prompt.
 
-
+ 
 	
 	Change SD CARD and repeat the process.
 
-
+ 
 
 	Find another USB Reader and repeat all over again with this USB Reader
 
