@@ -51,7 +51,7 @@ Screenshots
 -----------
 
 Camera (OV5640)
-![1080p60](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/camera.jpg)
+![ov5640](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/camera.jpg)
 
 1080P
 ![1080p60](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/1080p.png)
