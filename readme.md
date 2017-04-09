@@ -27,6 +27,7 @@ This is a LXDE OS image for the NanoPi A64
 
 ## Tested on NanoPi A64 board
 
+- Camera (OV5640) - status: working
 - Wifi (rtl8189es) - status: working
 - HDMI 720P - status: working (a64-2GB.dtb_720P)
 - HDMI 1080P - status: working (a64-2GB.dtb)
@@ -34,13 +35,11 @@ This is a LXDE OS image for the NanoPi A64
 - Kernel 3.10.104 - status: working
 - Kernel 3.10.105 - status: working
 - Leds (Blue) - status: working - "heartbeat"
-
 - Firefox 64bit - stable
 
 
 ## Currently not working
 
-- OV5640 (camera) - status: not working yet, may need a revision
 - shutdown not always works, reboot most of the times
 
 ## NanoPi A64 Booting linux
@@ -50,6 +49,9 @@ This is a LXDE OS image for the NanoPi A64
 
 Screenshots
 -----------
+
+Camera (OV5640)
+![1080p60](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/camera.jpg)
 
 1080P
 ![1080p60](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/1080p.png)
@@ -87,18 +89,16 @@ Issues
 	the power cord but always check card integrity after that.
  
     
-    	
-	Try again to boot several times, sometimes it enters in the u-boot prompt.
+
+		Try again to boot several times, sometimes it enters in the u-boot prompt.
 
    
   
-	
-	Change SD CARD and repeat the process.
+		Change SD CARD and repeat the process.
 
-   
-  
+     
 
-	Find another USB Reader and repeat all over again with this USB Reader
+		Find another USB Reader and repeat all over again with this USB Reader
 
 
 
@@ -182,3 +182,4 @@ History Log:
 * kernel 3.10.104 RC3 (tested and working)
 * screen images (WIP)
 * Initial instructions (WIP)
+* Camera (ov5640)
