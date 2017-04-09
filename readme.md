@@ -179,12 +179,20 @@ Now we have our SD CARD with the OS Image, boot with this card and Enjoy!
 
 Camera (OV5640)
 
-	To work with CAM500B (ov5640) and guvcview override
-	a64-2GB.dtb with a64-2GB.dtb_OV5640
+To work with CAM500B (ov5640) and guvcview override
+a64-2GB.dtb with a64-2GB.dtb_OV5640
 
 
-		mv /media/ubuntu/a64/a64-2GB.dtb /media/ubuntu/a64/a64-2GB.dtb_OK
-		cp -af a64-2GB.dtb_OV5640 /media/ubuntu/a64/a64-2GB.dtb
+	mv /media/ubuntu/a64/a64-2GB.dtb /media/ubuntu/a64/a64-2GB.dtb_OK
+	cp -af a64-2GB.dtb_OV5640 /media/ubuntu/a64/a64-2GB.dtb
+
+
+Add the camera modules to /etc/modules
+
+
+	dw9714_act
+	ov5640
+	vfe_v4l2
 
 	
 History Log:
