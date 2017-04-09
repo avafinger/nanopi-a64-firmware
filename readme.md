@@ -48,11 +48,12 @@ This is a LXDE OS image for the NanoPi A64
 [![NanoPI A64 Booting sequence](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/0.jpg)](https://youtu.be/0j9BPUnExdA)
 
 
+## Camera (OV5640)
+[![NanoPI A64 Booting sequence](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/camera.jpg)](https://youtu.be/UCD8cfAEmRE)
+
+
 Screenshots
 -----------
-
-Camera (OV5640)
-![ov5640](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/camera.jpg)
 
 1080P
 ![1080p60](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/1080p.png)
