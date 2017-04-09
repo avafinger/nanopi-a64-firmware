@@ -2,6 +2,7 @@ NanoPi A64 Ubuntu Xenial Xerus 16.04 LXDE OS Image (firmware)
 =============================================================
 
 **Update:** Kernel version 3.10.105 with Blue Led (heartbeat)
+**Update 2:** Camera with OV5640 activated and working
 
 
 LXDE (Lightweight X11 Desktop Environment) is a desktop environment which is lightweight 
@@ -90,15 +91,15 @@ Issues
  
     
 
-		Try again to boot several times, sometimes it enters in the u-boot prompt.
+	Try again to boot several times, sometimes it enters in the u-boot prompt.
 
    
   
-		Change SD CARD and repeat the process.
+	Change SD CARD and repeat the process.
 
      
 
-		Find another USB Reader and repeat all over again with this USB Reader
+	Find another USB Reader and repeat all over again with this USB Reader
 
 
 
@@ -174,6 +175,15 @@ Now we have our SD CARD with the OS Image, boot with this card and Enjoy!
 
 	pasw: ubuntu
 
+
+Camera (OV5640)
+
+	To work with CAM500B (ov5640) and guvcview override
+	a64-2GB.dtb with a64-2GB.dtb_OV5640
+
+
+		mv /media/ubuntu/a64/a64-2GB.dtb /media/ubuntu/a64/a64-2GB.dtb_OK
+		cp -af a64-2GB.dtb_OV5640 /media/ubuntu/a64/a64-2GB.dtb
 
 	
 History Log:
