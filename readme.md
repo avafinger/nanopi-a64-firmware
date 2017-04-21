@@ -37,7 +37,7 @@ This is a LXDE OS image for the NanoPi A64
 - Kernel 3.10.105 - status: working
 - Leds (Blue) - status: working - "heartbeat"
 - Firefox 64bit - stable
-
+- HW decoding H264 (1080P)
 
 ## Currently not working
 
@@ -50,6 +50,10 @@ This is a LXDE OS image for the NanoPi A64
 
 ## Camera (OV5640)
 [![NanoPI A64 Booting sequence](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/camera.jpg)](https://youtu.be/UCD8cfAEmRE)
+
+
+## HW decoding (1920x1080 H264) with cedrus
+[![NanoPI A64 Cedrus](https://github.com/avafinger/nanopi-a64-firmware/raw/master/img/1920x1080.jpg)](https://youtu.be/mXMOh9ShDDc)
 
 
 Screenshots
@@ -202,3 +206,4 @@ History Log:
 * screen images (WIP)
 * Initial instructions (WIP)
 * Camera (ov5640)
+* HW Decoding H264
