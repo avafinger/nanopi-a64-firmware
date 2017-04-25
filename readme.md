@@ -2,7 +2,10 @@ NanoPi A64 Ubuntu Xenial Xerus 16.04 LXDE OS Image (firmware)
 =============================================================
 
 **Update:** Kernel version 3.10.105 with Blue Led (heartbeat)
+
 **Update 2:** Camera with OV5640 activated and working
+
+**Update 3:** HW decode instructions: https://github.com/avafinger/cedrusH264_vdpau_A64
 
 
 LXDE (Lightweight X11 Desktop Environment) is a desktop environment which is lightweight 
@@ -98,15 +101,19 @@ Issues
 
 	Try again to boot several times, sometimes it enters in the u-boot prompt.
 
+	
+	HDMI 1080P and GbE draws a lot of power, check you PSU.
+	
+
    
+- Board never boots (what to do?)
   
-	Change SD CARD and repeat the process.
-
+		- Change SD CARD and repeat the process.
      
+		- Find another USB Reader and repeat all over again with this USB Reader
 
-	Find another USB Reader and repeat all over again with this USB Reader
-
-
+		- The default setup is HDMI 1080P, try to switch to 720P,
+		  use: https://github.com/avafinger/nanopi-a64-firmware/blob/master/a64-2GB.dtb_720P
 
 Credits
 -------
