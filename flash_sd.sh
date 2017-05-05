@@ -41,9 +41,11 @@ umount ${SDCARD}* >/dev/null 2>&1
 sleep 1
 sync
 
-sudo partprobe ${SDCARD}
-sleep 1
+sudo partprobe
+sleep 2
 sync
+sudo partprobe ${SDCARD}
+sleep 2
 
 set -e
 
@@ -53,20 +55,23 @@ dd if=./ub-nanopi-a64.bin conv=notrunc bs=1k seek=19096 of=${SDCARD}
 
 pt_info "Decompressing rootfs to $SDCARD"2", please wait... (takes some time)"
 mkdir -p erootfs
-mount $SDCARD"2" erootfs
+sudo partprobe ${SDCARD}
+sleep 4
+sudo mount $SDCARD"2" erootfs
 tar -xvpzf rootfs_nanopia64_rc1.tar.gz -C ./erootfs --numeric-ow
 sync
-umount erootfs
+sudo umount erootfs
 rm -fR erootfs
 sync
 pt_info "Decompressing boot to $SDCARD"1", please wait..."
 set +e
 mkdir eboot
-mount $SDCARD"1" eboot
+sudo mount $SDCARD"1" eboot
 tar -xvpzf boot_nanopia64_rc1.tar.gz -C ./eboot --no-same-owner
 sync
-umount eboot
+sudo umount eboot
 rm -fR eboot
 
 pt_ok "Finished flashing $SDCARD!"
 pt_ok "You can remove the SD card and boot up on your board. Enjoy!"
+
