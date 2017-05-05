@@ -57,7 +57,7 @@ rm -fR erootfs
 set +e
 mkdir eboot
 mount $SDCARD"1" eboot
-tar -xvpzf boot_nanopia64_rc1.tar.gz -C ./eboot
+tar -xvpzf boot_nanopia64_rc1.tar.gz -C ./eboot --no-same-owner
 sync
 umount eboot
 rm -fR eboot
