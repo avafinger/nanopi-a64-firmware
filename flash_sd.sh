@@ -35,8 +35,6 @@ if [ $UID -ne 0 ]
     exit
 fi
 
-if [ -e $SDCARD"p1" ] 
-
 pt_info "Umounting $out, please wait..."
 umount ${SDCARD}* >/dev/null 2>&1
 sleep 1
