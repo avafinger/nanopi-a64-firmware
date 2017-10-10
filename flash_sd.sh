@@ -48,10 +48,10 @@ sleep 2
 
 if [ -e ${SDCARD}"p1" ]; then
     pt_info "Detected version of Linux where partition files are prefixed with p (${SDCARD}p1)"
-    $p = "p"
+    addp="p"
 else
     pt_info "Detected version of linux where partition files are not prefixed with p (${SDCARD}1)"
-    $p = ""
+    addp=""
 fi
 
 set -e
@@ -60,20 +60,20 @@ pt_warn "Flashing $SDCARD...."
 dd if=./boot0.bin conv=notrunc bs=1k seek=8 of=${SDCARD}
 dd if=./ub-nanopi-a64.bin conv=notrunc bs=1k seek=19096 of=${SDCARD}
 
-pt_info "Decompressing rootfs to ${SDCARD}${p}"2", please wait... (takes some time)"
+pt_info "Decompressing rootfs to ${SDCARD}${addp}"2", please wait... (takes some time)"
 mkdir -p erootfs
 sudo partprobe ${SDCARD}
 sleep 4
-sudo mount ${SDCARD}${p}"2" erootfs
+sudo mount ${SDCARD}${addp}"2" erootfs
 tar -xvpzf rootfs_nanopia64_rc1.tar.gz -C ./erootfs --numeric-ow
 sync
 sudo umount erootfs
 rm -fR erootfs
 sync
-pt_info "Decompressing boot to ${SDCARD}${p}"1", please wait..."
+pt_info "Decompressing boot to ${SDCARD}${addp}"1", please wait..."
 set +e
 mkdir eboot
-sudo mount -t vfat ${SDCARD}${p}"1" eboot
+sudo mount -t vfat ${SDCARD}${addp}"1" eboot
 tar -xvpzf boot_nanopia64_rc1.tar.gz -C ./eboot --no-same-owner
 sync
 sudo umount eboot

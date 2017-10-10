@@ -81,21 +81,21 @@ sync
 
 if [ -e ${out}"p1" ]; then
     pt_info "Detected version of Linux where partition files are prefixed with p (${out}p1)"
-    $p = "p"
+    addp="p"
 else
     pt_info "Detected version of linux where partition files are not prefixed with p (${out}1)"
-    $p = ""
+    addp=""
 fi
 
 pt_warn "Formating $out ..."
 # Create boot file system (VFAT)
-dd if=/dev/zero bs=1M count=${boot_size} of=${out}${p}1
-mkfs.vfat -n boot -I ${out}${p}1
+dd if=/dev/zero bs=1M count=${boot_size} of=${out}${addp}1
+mkfs.vfat -n boot -I ${out}${addp}1
 
 # Create ext4 file system for rootfs
-mkfs.ext4 -F -b 4096 -E stride=2,stripe-width=1024 -L rootfs ${out}${p}2
+mkfs.ext4 -F -b 4096 -E stride=2,stripe-width=1024 -L rootfs ${out}${addp}2
 sync
-sudo tune2fs -O ^has_journal ${out}${p}2
+sudo tune2fs -O ^has_journal ${out}${addp}2
 sync
 
 pt_ok "Done - Geometry created and sd card '$out' formatted, now flash the image with ./flash_sd.sh"
