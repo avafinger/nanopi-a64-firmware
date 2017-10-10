@@ -79,15 +79,23 @@ sync
 partprobe -s ${out}
 sync
 
+if [ -e ${out}"p1" ]; then
+    pt_info "Detected version of Linux where partition files are prefixed with p (${out}p1)"
+    $p = "p"
+else
+    pt_info "Detected version of linux where partition files are not prefixed with p (${out}1)"
+    $p = ""
+fi
+
 pt_warn "Formating $out ..."
 # Create boot file system (VFAT)
-dd if=/dev/zero bs=1M count=${boot_size} of=${out}1
-mkfs.vfat -n boot -I ${out}1
+dd if=/dev/zero bs=1M count=${boot_size} of=${out}${p}1
+mkfs.vfat -n boot -I ${out}${p}1
 
 # Create ext4 file system for rootfs
-mkfs.ext4 -F -b 4096 -E stride=2,stripe-width=1024 -L rootfs ${out}2
+mkfs.ext4 -F -b 4096 -E stride=2,stripe-width=1024 -L rootfs ${out}${p}2
 sync
-sudo tune2fs -O ^has_journal ${out}2
+sudo tune2fs -O ^has_journal ${out}${p}2
 sync
 
 pt_ok "Done - Geometry created and sd card '$out' formatted, now flash the image with ./flash_sd.sh"
