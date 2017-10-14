@@ -7,6 +7,8 @@ NanoPi A64 Ubuntu Xenial Xerus 16.04 LXDE OS Image (firmware)
 
 **Update 3:** HW decode instructions: https://github.com/avafinger/cedrusH264_vdpau_A64
 
+**Update 4:** New Image with some fixes and goodies
+
 
 LXDE (Lightweight X11 Desktop Environment) is a desktop environment which is lightweight 
 and fast and uses less RAM and less CPU while being a feature rich desktop environment.
@@ -28,6 +30,16 @@ Disclaimer: Use at own risk
 
 This is a LXDE OS image for the NanoPi A64
 ------------------------------------------
+
+## Install new Image with some fixes/improvment
+
+- Compiled with **gcc 7.1**
+- Blue Led is now fixed, is wired active low.
+  added: led1_active_low = <0x1>;
+- No more FAT, we are now able to update/upgrade kernel with linux-image deb package
+- PPoE support enabled
+- Faster boot time
+
 
 ## Tested on NanoPi A64 board
 
