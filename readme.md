@@ -7,7 +7,7 @@ NanoPi A64 Ubuntu Xenial Xerus 16.04 LXDE OS Image (firmware)
 
 **Update 3:** HW decode instructions: https://github.com/avafinger/cedrusH264_vdpau_A64
 
-**Update 4:** New Image with some fixes and goodies: [see here](#tested-on-nanopi-a64-board)
+**Update 4:** New Image with some fixes and goodies: [see here](#install-new-image-with-some-fixesimprovement)
 
 
 LXDE (Lightweight X11 Desktop Environment) is a desktop environment which is lightweight 
@@ -40,6 +40,7 @@ This is a LXDE OS image for the NanoPi A64
 - PPoE support enabled
 - Faster boot time
 
+Instructions for the new Image: here
 
 ## Tested on NanoPi A64 board
 
@@ -137,6 +138,7 @@ Credits
 - @lex
 
 
+
 Instructions
 ------------
 
@@ -160,7 +162,6 @@ Clone our nanopi-a64-firmware
 
 
 	git clone https://github.com/avafinger/nanopi-a64-firmware
-
 	cd nanopi-a64-firmware/
 
 
@@ -183,12 +184,28 @@ Check if we have it correctly
 
 Format the SD CARD and Flash (Warning: run as sudo or root and make sure you get the correct DEVICE letter)
 
+Find your SD CARD device after insert the SD CARD type:
+
+        dmesg|tail
+
+
+If you have a USB card reader the format would be some thing like this
+
+        dmesg|tail
+        [97286.659006] sdc: detected capacity change from 15523119104 to 0
+        [99023.137526] sd 4:0:0:0: [sdc] 30318592 512-byte logical blocks: (15.5 GB/14.4 GiB)
+        [99023.147516] sd 4:0:0:0: [sdc] No Caching mode page found
+        [99023.147521] sd 4:0:0:0: [sdc] Assuming drive cache: write through
+        [99023.162514] sd 4:0:0:0: [sdc] No Caching mode page found
+        [99023.162518] sd 4:0:0:0: [sdc] Assuming drive cache: write through
+        [99023.168535]  sdc: sdc1 sdc2
+
+Type:
 
 	sudo chmod +x *.sh
-
 	sudo ./format_sd.sh /dev/sdc
-
 	sudo ./flash_sd.sh /dev/sdc
+
 
 
 
@@ -217,7 +234,64 @@ Add the camera modules to /etc/modules
 	ov5640
 	vfe_v4l2
 
-	
+
+Instructions for new Image
+--------------------------
+
+Rebuild our new kernel:
+
+
+        cat rootfs_nanopia64_rc2.tar.gz.0* > rootfs_nanopia64_rc2.tar.gz
+
+
+Check MD5 (must match with this):
+
+        md5sum boot_nanopia64_rc2.tar.gz
+        154350af7abdcf1062130c0b68bc1071  boot_nanopia64_rc2.tar.gz
+
+and
+
+        md5sum rootfs_nanopia64_rc2.tar.gz
+        81be98d5f36ec6d42178028c0ab05fce  rootfs_nanopia64_rc2.tar.gz
+
+
+Find your SD CARD device after insert the SD CARD type:
+
+        dmesg|tail
+
+
+If you have a USB card reader the format would be some thing like this
+
+        dmesg|tail
+        [97286.659006] sdc: detected capacity change from 15523119104 to 0
+        [99023.137526] sd 4:0:0:0: [sdc] 30318592 512-byte logical blocks: (15.5 GB/14.4 GiB)
+        [99023.147516] sd 4:0:0:0: [sdc] No Caching mode page found
+        [99023.147521] sd 4:0:0:0: [sdc] Assuming drive cache: write through
+        [99023.162514] sd 4:0:0:0: [sdc] No Caching mode page found
+        [99023.162518] sd 4:0:0:0: [sdc] Assuming drive cache: write through
+        [99023.168535]  sdc: sdc1 sdc2
+
+If you have a SD CARD reader embedded in your laptop, the format would be like this:
+
+
+        dmesg|tail
+        [63376.329036] mmc0: new SDHC card at address 1234
+        [63376.368234] mmcblk0: mmc0:1234 SA04G 3.67 GiB 
+        [63376.368372]  mmcblk0: p1 p2
+
+
+Flash New Image to SD CARD, type in shell:
+
+        sudo ./burn_sdcard.sh /dev/sdc
+
+or
+
+	sudo ./burn_sdcard.sh /dev/mmcblk0
+
+
+wait untill finish.
+
+
 History Log:
 ===========
 * initial commit (readme file)
@@ -226,3 +300,4 @@ History Log:
 * Initial instructions (WIP)
 * Camera (ov5640)
 * HW Decoding H264 (https://github.com/avafinger/cedrusH264_vdpau_A64)
+* New OS Image
