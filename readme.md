@@ -40,7 +40,7 @@ This is a LXDE OS image for the NanoPi A64
 - PPoE support enabled
 - Faster boot time
 
-Instructions for the new Image: [here] (#instructions-for-new-image)
+Instructions for the new Image: [here](#instructions-for-new-image)
 
 ## Tested on NanoPi A64 board
 
