@@ -9,6 +9,8 @@ NanoPi A64 Ubuntu Xenial Xerus 16.04 LXDE OS Image (firmware)
 
 **Update 4:** New Image with some fixes and goodies: [see here](#install-new-image-with-some-fixesimprovement)
 
+**Update 5:** fix for USB EHCI and OHCI plus Jack sound
+
 
 LXDE (Lightweight X11 Desktop Environment) is a desktop environment which is lightweight 
 and fast and uses less RAM and less CPU while being a feature rich desktop environment.
@@ -38,6 +40,7 @@ This is a LXDE OS image for the NanoPi A64
   added: led1_active_low = <0x1>;
 - No more FAT, we are now able to update/upgrade kernel with linux-image deb package
 - PPoE support enabled
+- Built in analog sound (Jack)
 - Faster boot time
 
 Instructions for the new Image: [here](#instructions-for-new-image)
@@ -54,6 +57,7 @@ Instructions for the new Image: [here](#instructions-for-new-image)
 - Leds (Blue) - status: working - "heartbeat"
 - Firefox 64bit - stable
 - HW decoding H264 (1080P)  - https://github.com/avafinger/cedrusH264_vdpau_A64
+- USB highspeed and lowspeed - status: working
 
 ## Currently not working
 
@@ -127,6 +131,11 @@ Issues
 
 		- The default setup is HDMI 1080P, try to switch to 720P,
 		  use: https://github.com/avafinger/nanopi-a64-firmware/blob/master/a64-2GB.dtb_720P
+
+- SPI
+
+        Spi needs some attention, still need to work out the DT for spi device.
+
 
 Credits
 -------
@@ -238,6 +247,8 @@ Add the camera modules to /etc/modules
 Instructions for new Image
 --------------------------
 
+- Build v1 (works only the lower USB receptacule with high speed hub)
+
 Rebuild our new kernel:
 
 
@@ -253,6 +264,25 @@ and
 
         md5sum rootfs_nanopia64_rc2.tar.gz
         81be98d5f36ec6d42178028c0ab05fce  rootfs_nanopia64_rc2.tar.gz
+
+
+- **Build v2** (works all USB receptacules)
+
+Rebuild our new kernel:
+
+
+        cat rootfs_nanopia64_rc3.tar.gz.0* > rootfs_nanopia64_rc3.tar.gz
+
+
+Check MD5 (must match with this):
+
+        md5sum boot_nanopia64_rc3.tar.gz
+        e4d1ff4ba4740900ecaf65bd357b022b  boot_nanopia64_rc3.tar.gz
+
+and
+
+        md5sum rootfs_nanopia64_rc3.tar.gz
+        ad78376f488e417e05e780007c2538e0  rootfs_nanopia64_rc3.tar.gz
 
 
 Find your SD CARD device after insert the SD CARD type:
@@ -282,6 +312,12 @@ If you have a SD CARD reader embedded in your laptop, the format would be like t
 
 Flash New Image to SD CARD, type in shell:
 
+
+        sudo chmod +x *.sh
+
+
+- Build v1
+
         sudo ./burn_sdcard.sh /dev/sdc
 
 or
@@ -289,7 +325,16 @@ or
         sudo ./burn_sdcard.sh /dev/mmcblk0
 
 
-wait untill finish.
+- **Build v2**
+
+        sudo ./burn_sdcard_v2.sh /dev/sdc
+
+or
+
+        sudo ./burn_sdcard_v2.sh /dev/mmcblk0
+
+
+wait untill finish. Remove the SD CARD and boot you device with the SD CARD inserted and Enjoy!
 
 
 History Log:
@@ -301,3 +346,4 @@ History Log:
 * Camera (ov5640)
 * HW Decoding H264 (https://github.com/avafinger/cedrusH264_vdpau_A64)
 * New OS Image
+* USB fix (ECHI and OHCI works on all USB connectors)
