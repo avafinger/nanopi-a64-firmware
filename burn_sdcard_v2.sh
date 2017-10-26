@@ -109,7 +109,7 @@ sleep 2
 
 set -e
 pt_warn "Flashing $out...."
-dd if=./u-boot-nanopi-a64.bin conv=notrunc bs=1k seek=8 of=$out
+dd if=./u-boot-nanopia64.bin conv=notrunc bs=1k seek=8 of=$out
 
 pt_info "Decompressing rootfs to $out$part"2", please wait... (takes some time)"
 mkdir -p erootfs
@@ -117,7 +117,7 @@ sudo partprobe ${out}
 sleep 2
 sync
 sudo mount $out$part"2" erootfs
-tar -xvpzf rootfs_nanopia64_rc2.tar.gz -C ./erootfs --numeric-ow
+tar -xvpzf rootfs_nanopia64_rc3.tar.gz -C ./erootfs --numeric-ow
 sync
 sudo umount erootfs
 rm -fR erootfs
@@ -125,7 +125,7 @@ sync
 set +e
 mkdir eboot
 sudo mount $out$part"1" eboot
-tar -xvpzf boot_nanopia64_rc2.tar.gz -C ./eboot  --numeric-ow
+tar -xvpzf boot_nanopia64_rc3.tar.gz -C ./eboot  --numeric-ow
 sync
 sudo umount eboot
 rm -fR eboot
