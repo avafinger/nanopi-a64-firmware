@@ -42,6 +42,7 @@ This is a LXDE OS image for the NanoPi A64
 - PPoE support enabled
 - Built in analog sound (Jack)
 - Faster boot time
+- ssh is installed (v2)
 
 Instructions for the new Image: [here](#instructions-for-new-image)
 
