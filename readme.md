@@ -343,8 +343,8 @@ wait untill finish. Remove the SD CARD and boot you device with the SD CARD inse
 
 ## Instructions for Firmware Image
 
-There is an experimental Firmware Image to be flashed onto 8 GB (or >) sd card using your preferred Disk Utility.
-It is recomended to usea good SD card and a good Reader/Writer SDHC card. Use a trusted brand.
+There is an experimental Firmware Image to be flashed onto 8 GB sd card (or greater) using your preferred Disk Utility.
+It is highly recomended to use a good SD card and a good SDHC card Reader and Writer. Use a trusted brand.
 
 - Download from here
 	
