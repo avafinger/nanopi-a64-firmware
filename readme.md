@@ -11,7 +11,7 @@ NanoPi A64 Ubuntu Xenial Xerus 16.04 LXDE OS Image (firmware)
 
 **Update 5:** fix for USB EHCI and OHCI plus Jack sound
 
-**Update 6:** Firmware Image with support for PPP and GSM modems: [here](#Instructions-for-Firmware-Image)
+**Update 6:** Firmware Image with support for PPP and GSM modems: [here](#instructions-for-firmware-image)
 
 
 LXDE (Lightweight X11 Desktop Environment) is a desktop environment which is lightweight 
