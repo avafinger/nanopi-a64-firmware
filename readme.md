@@ -11,6 +11,8 @@ NanoPi A64 Ubuntu Xenial Xerus 16.04 LXDE OS Image (firmware)
 
 **Update 5:** fix for USB EHCI and OHCI plus Jack sound
 
+**Update 6:** Firmware Image with support for PPP and GSM modems: [here](#Instructions for Firmware Image)
+
 
 LXDE (Lightweight X11 Desktop Environment) is a desktop environment which is lightweight 
 and fast and uses less RAM and less CPU while being a feature rich desktop environment.
@@ -43,6 +45,7 @@ This is a LXDE OS image for the NanoPi A64
 - Built in analog sound (Jack)
 - Faster boot time
 - ssh is installed (v2)
+- PPP and 3G/GSM modem support (Experimental)
 
 Instructions for the new Image: [here](#instructions-for-new-image)
 
@@ -338,6 +341,20 @@ or
 wait untill finish. Remove the SD CARD and boot you device with the SD CARD inserted and Enjoy!
 
 
+Instructions for Firmware Image
+-------------------------------
+
+There is an experimental Firmware Image to be flashed onto 8 GB (or >) sd card using your preferred Disk Utility.
+It is recomended to usea good SD card and a good Reader/Writer SDHC card. Use a trusted brand.
+
+- Download from here
+	
+	https://mega.nz/#F!9OxRnCya!6fsKg-X0tp76Pw89RdMspw
+
+It has been Zipped to save space with **7zip**, please unzip before burning.
+Use **Win32DiskImager** or a good disk imager.
+
+
 History Log:
 ===========
 * initial commit (readme file)
@@ -348,3 +365,4 @@ History Log:
 * HW Decoding H264 (https://github.com/avafinger/cedrusH264_vdpau_A64)
 * New OS Image
 * USB fix (ECHI and OHCI works on all USB connectors)
+* PPP and 3G/GSM modem support
