@@ -11,7 +11,7 @@ NanoPi A64 Ubuntu Xenial Xerus 16.04 LXDE OS Image (firmware)
 
 **Update 5:** fix for USB EHCI and OHCI plus Jack sound
 
-**Update 6:** Firmware Image with support for PPP and GSM modems: [here](#Instructions for Firmware Image)
+**Update 6:** Firmware Image with support for PPP and GSM modems: [here](#Instructions-for-Firmware-Image)
 
 
 LXDE (Lightweight X11 Desktop Environment) is a desktop environment which is lightweight 
@@ -341,8 +341,7 @@ or
 wait untill finish. Remove the SD CARD and boot you device with the SD CARD inserted and Enjoy!
 
 
-Instructions for Firmware Image
--------------------------------
+## Instructions for Firmware Image
 
 There is an experimental Firmware Image to be flashed onto 8 GB (or >) sd card using your preferred Disk Utility.
 It is recomended to usea good SD card and a good Reader/Writer SDHC card. Use a trusted brand.
