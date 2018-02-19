@@ -141,6 +141,25 @@ Issues
         Spi needs some attention, still need to work out the DT for spi device.
 
 
+
+- BUG: soft lockup - CPU#0 stuck for 21s! 
+
+	Latest kernel has this latent bug that can manifest or no in your board.
+	This is related to a race condition and it predates Kernel 3.10.104 and afterwards
+	so if you are afected by this bug try to unplug power cable, wait a few seconds and try again.
+	I found this is probably due to the Wifi high load on trying to connect to the AP and can trigger
+	the issue. Try to remove wpa_supplicant and wlan in /etc/network/interfaces if you can, maybe this can help
+
+interesting reading can be found here and there:
+
+	https://www.suse.com/support/kb/doc/?id=7017652
+
+	https://github.com/longsleep/build-pine64-image/issues/51
+
+	https://github.com/openhab/openhabian/issues/215
+
+
+
 Credits
 -------
 
@@ -365,3 +384,4 @@ History Log:
 * New OS Image
 * USB fix (ECHI and OHCI works on all USB connectors)
 * PPP and 3G/GSM modem support
+* latent BUG: **soft lockup - CPU#0 stuck for 21s!** 
