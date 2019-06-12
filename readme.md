@@ -13,6 +13,8 @@ NanoPi A64 Ubuntu Xenial Xerus 16.04 LXDE OS Image (firmware)
 
 **Update 6:** Firmware Image with support for PPP and GSM modems: [here](#instructions-for-firmware-image)
 
+**Uodate 7:** Kodi on NanoPi A64 (2019)
+
 
 LXDE (Lightweight X11 Desktop Environment) is a desktop environment which is lightweight 
 and fast and uses less RAM and less CPU while being a feature rich desktop environment.
@@ -372,6 +374,12 @@ It is highly recomended to use a good SD card and a good SDHC card Reader and Wr
 It has been Zipped to save space with **7zip**, please unzip before burning.
 Use **Win32DiskImager** or a good disk imager.
 
+## Kodi on NanoPi A64
+
+There is a pre-release image with mainline kernel 4.20.17 with Kodi 18.3 RC1.
+If you would to test and see if works for you.
+Go to: https://github.com/avafinger/nanopi-a64-kodi
+
 
 History Log:
 ===========
@@ -385,3 +393,4 @@ History Log:
 * USB fix (ECHI and OHCI works on all USB connectors)
 * PPP and 3G/GSM modem support
 * latent BUG: **soft lockup - CPU#0 stuck for 21s!** 
+* Kodi on A64 (pre-release
