@@ -13,7 +13,7 @@ NanoPi A64 Ubuntu Xenial Xerus 16.04 LXDE OS Image (firmware)
 
 **Update 6:** Firmware Image with support for PPP and GSM modems: [here](#instructions-for-firmware-image)
 
-**Uodate 7:** Kodi on NanoPi A64 (2019)
+**Uodate 7:** Kodi on NanoPi A64 (2019): https://github.com/avafinger/nanopi-a64-firmware#kodi-on-nanopi-a64
 
 
 LXDE (Lightweight X11 Desktop Environment) is a desktop environment which is lightweight 
